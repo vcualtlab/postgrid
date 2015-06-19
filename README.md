@@ -1,45 +1,34 @@
 # ALT Lab Post Grid
-Version: 1.0
-Contributors: luetkemj
-Requires at least: 3.0.1
-Tested up to: 4.2.2
-License: WTFL
-License URI: http://www.wtfpl.net/
 
-Shortcode for displaying posts or custom post types in masonry grid.
+Version: 1.0
+
+Requires at least: 3.0.1
+
+Tested up to: 4.2.2
 
 ## Description
 
 Shortcode for displaying posts or custom post types in masonry grid.
 
+## Usage
 
-| Attribute        		 | Default  | Description   
-| ---------------------- | -------- | ------------- 
-| $comment           | false    | Output full comment
-| $title      		 | true     | Output title
-| $date       		 | true     | Output Date
-| $link       		 | true     | Wrap title in permalink to post
-| $max_number 		 | null     | Set max limit of comments to display
-| $dispay_list_title | true     | Display "Comments: " before list
-| $cache             | 43200    | Cache in seconds
-
-
+`[altlab-postgrid]`
 
 | Attribute        | Default  | Description   
-| ---------------- | -------- | ------------- 
-| post_type        | post     | any registered post type
-| category_name    |          | comma seperated list of category slugs
-| tag              |          |	comma seperated list of tag slugs
-| paged            | true     | enable Pagination
-| posts_per_page   | 15       | max number of posts per page
-| max_column       | 3        | maximum number of columns at fullscreen (responsive)
-| thumbnail        | true     | show thumbnail (featured image)
-| thumbnail_size   | large    | Any registered thumbnail size (wp defaults: thumbnail, medium, large, full)
-| excerpt          | false    | show excerpt
-| content          | true     | show content
-| title            | false    | show title
-| author           | false    | show author
-| date             | false    | show date
+| :--------------  | :------- | :------------- 
+| post_type        | 'post'     | any registered post type
+| category_name    | ''         | comma seperated list of category slugs
+| tag              | ''         | comma seperated list of tag slugs
+| paged            | 'true'     | enable Pagination
+| posts_per_page   | '15'       | max number of posts per page
+| max_column       | '3'        | maximum number of columns (1-6) at fullscreen (responsive)
+| thumbnail        | 'true'     | show thumbnail (featured image)
+| thumbnail_size   | 'large'    | Any registered thumbnail size (wp defaults: thumbnail, medium, large, full)
+| excerpt          | 'false'    | show excerpt
+| content          | 'true'     | show content
+| title            | 'false'    | show title
+| author           | 'false'    | show author
+| date             | 'false'    | show date
 
 
 
