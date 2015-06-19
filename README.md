@@ -17,7 +17,7 @@ Shortcode for displaying posts or custom post types in masonry grid.
 | Attribute        | Default  | Description   
 | :--------------  | :------- | :------------- 
 | post_type        | 'post'     | any registered post type
-| category_name    | ''         | comma seperated list of category slugs
+| category         | ''         | comma seperated list of category slugs
 | tag              | ''         | comma seperated list of tag slugs
 | paged            | 'true'     | enable Pagination
 | posts_per_page   | '15'       | max number of posts per page

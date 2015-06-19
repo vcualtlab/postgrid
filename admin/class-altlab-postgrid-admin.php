@@ -109,7 +109,7 @@ function altlab_postgrid_shortcode( $atts ) {
     $a = shortcode_atts( array(
         'paged' => 'true',
         'post_type' => 'post',
-        'category_name' => '',
+        'category' => '',
         'tag' => '',
         'posts_per_page' => '15',
         'max_column' => '3',
@@ -130,7 +130,7 @@ function altlab_postgrid_shortcode( $atts ) {
 		'post_type' => $a['post_type'],
 		'paged' => $paged,
 		'posts_per_page' => $a['posts_per_page'],
-		'category_name' => $a['category_name'],
+		'category_name' => $a['category'],
         'tag' => $a['tag']
 	);
 
@@ -163,6 +163,7 @@ function altlab_postgrid_shortcode( $atts ) {
 			if ( $a['date'] == 'true' ){
 				$output .= "<li class='post-date'>".get_the_date()."</li>";
 			}
+			$output .= "</ul>";
 		}
 
 		if ( current_user_can('administrator') ){
