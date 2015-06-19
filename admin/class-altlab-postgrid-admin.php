@@ -108,7 +108,7 @@ function altlab_postgrid_shortcode( $atts ) {
 	global $post;
     $a = shortcode_atts( array(
         'paged' => 'true',
-        'post_type' => 'twitpic',
+        'post_type' => 'post',
         'category_name' => '',
         'tag' => '',
         'posts_per_page' => '15',
@@ -163,7 +163,6 @@ function altlab_postgrid_shortcode( $atts ) {
 			if ( $a['date'] == 'true' ){
 				$output .= "<li class='post-date'>".get_the_date()."</li>";
 			}
-
 		}
 
 		if ( current_user_can('administrator') ){
@@ -194,4 +193,4 @@ function altlab_postgrid_shortcode( $atts ) {
 
     return $output;
 }
-add_shortcode( 'twitpic', 'altlab_postgrid_shortcode' );
+add_shortcode( 'altlab-postgrid', 'altlab_postgrid_shortcode' );

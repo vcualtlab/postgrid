@@ -15,12 +15,12 @@
  * @wordpress-plugin
  * Plugin Name:       ALT Lab Post Grid
  * Plugin URI:        https://github.com/vcualtlab/postgrid
- * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
+ * Description:       Shortcode to display posts in Masonry Grid
  * Version:           1.0.0
  * Author:            Mark Luetke
  * Author URI:        http://luetkemj.github.io
- * License:           GPL-2.0+
- * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
+ * License:           WTFL
+ * License URI:       http://www.wtfpl.net/
  * Text Domain:       altlab-postgrid
  * Domain Path:       /languages
  */
