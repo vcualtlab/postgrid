@@ -14,22 +14,23 @@ Shortcode for displaying posts or custom post types in masonry grid.
 
 `[altlab-postgrid]`
 
-| Attribute        | Default  | Description   
-| :--------------  | :------- | :------------- 
-| post_type        | 'post'     | any registered post type
-| category         | ''         | comma seperated list of category slugs
-| tag              | ''         | comma seperated list of tag slugs
-| paged            | 'true'     | enable Pagination
-| posts_per_page   | '15'       | max number of posts per page
-| max_column       | '3'        | maximum number of columns (1-6) at fullscreen (responsive)
-| thumbnail        | 'true'     | show thumbnail (featured image)
-| thumbnail_size   | 'large'    | Any registered thumbnail size (wp defaults: thumbnail, medium, large, full)
-| excerpt          | 'false'    | show excerpt
-| content          | 'true'     | show content
-| title            | 'false'    | show title
-| permalink        | 'false'    | wrap title in permalink
-| author           | 'false'    | show author
-| date             | 'false'    | show date
+| Attribute         | Default    | Description   
+| :---------------- | :--------- | :------------- 
+| post_type         | 'post'     | any registered post type
+| category          | ''         | comma seperated list of category slugs
+| tag               | ''         | comma seperated list of tag slugs
+| paged             | 'true'     | enable Pagination
+| posts_per_page    | '15'       | max number of posts per page
+| max_column        | '3'        | maximum number of columns (1-6) at fullscreen (responsive)
+| thumbnail         | 'true'     | show thumbnail (featured image)
+| thumbnail_size    | 'large'    | Any registered thumbnail size (wp defaults: thumbnail, medium, large, full)
+| excerpt           | 'false'    | show excerpt
+| content           | 'true'     | show content
+| title             | 'false'    | show title
+| permalink         | 'false'    | wrap title in permalink
+| author            | 'false'    | show author
+| date              | 'false'    | show date
+| use_plugin_styles | 'true'     | include basic styles from plugin
 
 
 

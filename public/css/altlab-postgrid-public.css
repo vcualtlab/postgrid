@@ -123,3 +123,25 @@
 }
 
 
+/* ALTLAB Postgrid */
+.altlab-postgrid-brick.styled {
+	margin-top: 1em;
+	padding: .5em;
+	border: 1px solid #eee;
+	overflow: hidden;
+}
+
+.altlab-postgrid-brick.styled .thumbnail {
+	margin-bottom: .5em;
+}
+
+.altlab-postgrid-brick.styled .post-meta {
+	margin: 0 0 1em;
+	padding: 0;
+	list-style-type: none;
+}
+
+.altlab-postgrid-brick.styled .post-meta .post-title {
+	font-weight: bold;
+}
+
