@@ -118,6 +118,7 @@ function altlab_postgrid_shortcode( $atts ) {
         'excerpt' => 'false',
         'content' => 'true',
         'title' => 'false',
+        'permalink' => 'false',
         'author' => 'false',
         'date' => 'false'
     ), $atts );
@@ -148,14 +149,20 @@ function altlab_postgrid_shortcode( $atts ) {
 		$output .= "<article class='altlab-postgrid-brick hentry'>";
 		if ( has_post_thumbnail() && $a['thumbnail'] == 'true' ) {
 			$thumbnail_url = wp_get_attachment_image_src( get_post_thumbnail_id(), $a['thumbnail_size']);
-			$output .= "<img class='twitpic' src='".$thumbnail_url[0]."'/>";
+			$output .= "<img class='thumbnail' src='".$thumbnail_url[0]."'/>";
 		}
 		
 		// postmeta
 		if ( $a['title'] == 'true' || $a['author'] == 'true' || $a['date'] == 'true' ){
 			$output .= "<ul class='post-meta'>";
-			if ( $a['title'] == 'true' ){
-				$output .= "<li class='post-title'>".get_the_title()."</li>";
+			if ( $a['permalink'] == 'true' ){
+				$output .= "<a href='".get_permalink()."'>";
+			}
+				if ( $a['title'] == 'true' ){
+					$output .= "<li class='post-title'>".get_the_title()."</li>";
+				}
+			if ( $a['permalink'] == 'true' ){
+				$output .= "</a>";
 			}
 			if ( $a['author'] == 'true' ){
 				$output .= "<li class='post-author'>".get_the_author()."</li>";
