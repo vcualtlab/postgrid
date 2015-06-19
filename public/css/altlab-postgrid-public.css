@@ -1,0 +1,125 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+
+  /* fluid 5 columns */
+.altlab-postgrid-masonry{
+	box-sizing: border-box;
+	width: 98%;
+	margin: 0 1%;
+}
+
+.altlab-postgrid-grid-sizer,
+.altlab-postgrid-brick { 
+	box-sizing: border-box;
+	width: 100%;
+	margin-right: 0%;
+}
+
+.altlab-postgrid-brick{
+	margin-bottom: 1em;
+}
+
+.altlab-postgrid-brick img{
+	max-width: 100% !important;
+	height: auto;
+	box-sizing: border-box;
+}
+
+
+
+@media (min-width: 500px) {
+	.altlab-postgrid-masonry{
+		width: 98%;
+		margin: 0 1%;
+		position: relative;
+		right: -2%;
+	}
+	.altlab-postgrid-masonry.maxcol2 .altlab-postgrid-grid-sizer,
+	.altlab-postgrid-masonry.maxcol3 .altlab-postgrid-grid-sizer,
+	.altlab-postgrid-masonry.maxcol4 .altlab-postgrid-grid-sizer,
+	.altlab-postgrid-masonry.maxcol5 .altlab-postgrid-grid-sizer,
+	.altlab-postgrid-masonry.maxcol6 .altlab-postgrid-grid-sizer,
+	.altlab-postgrid-masonry.maxcol2 .altlab-postgrid-brick,
+	.altlab-postgrid-masonry.maxcol3 .altlab-postgrid-brick,
+	.altlab-postgrid-masonry.maxcol4 .altlab-postgrid-brick,
+	.altlab-postgrid-masonry.maxcol5 .altlab-postgrid-brick,
+	.altlab-postgrid-masonry.maxcol6 .altlab-postgrid-brick{ 
+		width: 48%;
+		margin-right: 1%;
+	}
+}
+
+@media (min-width: 900px) {
+	.altlab-postgrid-masonry{
+		width: 98%;
+		margin: 0 1%;
+		position: relative;
+		right: -1%;
+	}
+	.altlab-postgrid-masonry.maxcol3 .altlab-postgrid-grid-sizer,
+	.altlab-postgrid-masonry.maxcol4 .altlab-postgrid-grid-sizer,
+	.altlab-postgrid-masonry.maxcol5 .altlab-postgrid-grid-sizer,
+	.altlab-postgrid-masonry.maxcol6 .altlab-postgrid-grid-sizer,
+	.altlab-postgrid-masonry.maxcol3 .altlab-postgrid-brick,
+	.altlab-postgrid-masonry.maxcol4 .altlab-postgrid-brick,
+	.altlab-postgrid-masonry.maxcol5 .altlab-postgrid-brick,
+	.altlab-postgrid-masonry.maxcol6 .altlab-postgrid-brick{ 
+		width: 32%;
+		margin-right: 1%;
+	}
+}
+
+@media (min-width: 1200px) {
+	.altlab-postgrid-masonry{
+		width: 98%;
+		margin: 0 1%;
+		position: relative;
+		right: -1%;
+	}
+
+	.altlab-postgrid-masonry.maxcol4 .altlab-postgrid-grid-sizer,
+	.altlab-postgrid-masonry.maxcol5 .altlab-postgrid-grid-sizer,
+	.altlab-postgrid-masonry.maxcol6 .altlab-postgrid-grid-sizer,
+	.altlab-postgrid-masonry.maxcol4 .altlab-postgrid-brick,
+	.altlab-postgrid-masonry.maxcol5 .altlab-postgrid-brick,
+	.altlab-postgrid-masonry.maxcol6 .altlab-postgrid-brick{ 
+		width: 24%;
+		margin-right: 1%;
+	}
+}
+
+@media (min-width: 1400px) {
+	.altlab-postgrid-masonry{
+		width: 98%;
+		margin: 0 1%;
+		position: relative;
+		right: -1%;
+	}
+
+	.altlab-postgrid-masonry.maxcol5 .altlab-postgrid-grid-sizer,
+	.altlab-postgrid-masonry.maxcol6 .altlab-postgrid-grid-sizer,
+	.altlab-postgrid-masonry.maxcol5 .altlab-postgrid-brick,
+	.altlab-postgrid-masonry.maxcol6 .altlab-postgrid-brick{ 
+		width: 19%;
+		margin-right: 1%;
+	}
+}
+
+@media (min-width: 1800px) {
+	.altlab-postgrid-masonry{
+		width: 98%;
+		margin: 0 1%;
+		position: relative;
+		right: -1%;
+	}
+
+	.altlab-postgrid-masonry.maxcol6 .altlab-postgrid-grid-sizer,
+	.altlab-postgrid-masonry.maxcol6 .altlab-postgrid-brick{ 
+		width: 15%;
+		margin-right: 1%;
+	}
+}
+
+
