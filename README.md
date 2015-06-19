@@ -27,6 +27,7 @@ Shortcode for displaying posts or custom post types in masonry grid.
 | excerpt          | 'false'    | show excerpt
 | content          | 'true'     | show content
 | title            | 'false'    | show title
+| permalink        | 'false'    | wrap title in permalink
 | author           | 'false'    | show author
 | date             | 'false'    | show date
 
