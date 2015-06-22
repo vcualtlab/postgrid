@@ -185,7 +185,7 @@ function altlab_postgrid_shortcode( $atts ) {
 		}
 
 		if ( current_user_can('administrator') ){
-			$output .= "<a class='edit-this-link' href='".get_edit_post_link()."'>edit this</a>";
+			$output .= "<div class='edit-this-link'><a href='".get_edit_post_link()."'>edit this</a></div>";
 		}
 
 		$output .= "</article>";
