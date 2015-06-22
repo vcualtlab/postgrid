@@ -121,7 +121,8 @@ function altlab_postgrid_shortcode( $atts ) {
         'permalink' => 'false',
         'author' => 'false',
         'date' => 'false',
-        'use_plugin_styles' => 'true'
+        'use_plugin_styles' => 'true',
+        'use_plugin_theme' => 'light'
     ), $atts );
  	
  	$output= "";
@@ -148,7 +149,8 @@ function altlab_postgrid_shortcode( $atts ) {
 	while ( $the_query->have_posts() ) : $the_query->the_post();
 		// thumbnail output
 		$style = ($a['use_plugin_styles'] == 'true') ? 'styled' : '';
-		$output .= "<article class='altlab-postgrid-brick ".$style."'>";
+		$theme = $a['use_plugin_theme'];
+		$output .= "<article class='altlab-postgrid-brick ".$style." ".$theme."'>";
 		if ( has_post_thumbnail() && $a['thumbnail'] == 'true' ) {
 			$thumbnail_url = wp_get_attachment_image_src( get_post_thumbnail_id(), $a['thumbnail_size']);
 			$output .= "<img class='thumbnail' src='".$thumbnail_url[0]."'/>";
@@ -183,7 +185,7 @@ function altlab_postgrid_shortcode( $atts ) {
 		}
 
 		if ( current_user_can('administrator') ){
-			$output .= "<a href='".get_edit_post_link()."'>{edit}</a>";
+			$output .= "<a class='edit-this-link' href='".get_edit_post_link()."'>edit this</a>";
 		}
 
 		$output .= "</article>";

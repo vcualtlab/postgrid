@@ -31,6 +31,7 @@ Shortcode for displaying posts or custom post types in masonry grid.
 | author            | 'false'    | show author
 | date              | 'false'    | show date
 | use_plugin_styles | 'true'     | include basic styles from plugin
+| use_plugin_theme  | 'light'    | light / dark (required use_plugin_styles set to true)
 
 
 

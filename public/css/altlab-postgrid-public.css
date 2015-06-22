@@ -123,16 +123,35 @@
 }
 
 
-/* ALTLAB Postgrid */
 .altlab-postgrid-brick.styled {
-	margin-top: 1em;
-	padding: .5em;
-	border: 1px solid #eee;
+	margin-top: 1%;
+	margin-bottom: 0;
+	padding: 30px;
 	overflow: hidden;
+	font-size: 16px;
+	line-height: 24px;
+}
+
+.altlab-postgrid-brick.styled.light {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	border: 1px solid #E2E2E2;
+	background: white;
+	color: #262B34;
+}
+
+.altlab-postgrid-brick.styled.dark {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	border: 1px solid #E2E2E2;
+	background: #313131;
+	color: #F7F7F7;
+}
+
+.altlab-postgrid-brick.styled a{
+	text-decoration: none;
 }
 
 .altlab-postgrid-brick.styled .thumbnail {
-	margin-bottom: .5em;
+	margin-bottom: 15px;
 }
 
 .altlab-postgrid-brick.styled .post-meta {
@@ -142,6 +161,30 @@
 }
 
 .altlab-postgrid-brick.styled .post-meta .post-title {
-	font-weight: bold;
+	font-weight: 400;
+	text-transform: uppercase;
 }
 
+.altlab-postgrid-brick.styled .post-meta .post-author,
+.altlab-postgrid-brick.styled .post-meta .post-date{
+	font-size: 14px;
+	font-weight: 300;
+	line-height: 20px;
+}
+
+.altlab-postgrid-brick.styled .edit-this-link{
+	font-weight: 14px;
+}
+
+.navigation.pagination{
+	overflow: auto;
+	zoom: 1;
+}
+
+.navigation.pagination .next{
+	float: right;
+}
+
+.navigation.pagination .prev{
+	float: left;
+}
