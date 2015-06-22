@@ -24,12 +24,12 @@ Shortcode for displaying posts or custom post types in masonry grid.
 | max_column        | '3'        | maximum number of columns (1-6) at fullscreen (responsive)
 | thumbnail         | 'true'     | show thumbnail (featured image)
 | thumbnail_size    | 'large'    | Any registered thumbnail size (wp defaults: thumbnail, medium, large, full)
-| excerpt           | 'false'    | show excerpt
-| content           | 'true'     | show content
-| title             | 'false'    | show title
-| permalink         | 'false'    | wrap title in permalink
-| author            | 'false'    | show author
-| date              | 'false'    | show date
+| excerpt           | 'true'     | show excerpt
+| content           | 'false'    | show content
+| title             | 'true'     | show title
+| permalink         | 'true'     | wrap title in permalink
+| author            | 'true'     | show author
+| date              | 'true'     | show date
 | use_plugin_styles | 'true'     | include basic styles from plugin
 | use_plugin_theme  | 'light'    | light / dark (required use_plugin_styles set to true)
 

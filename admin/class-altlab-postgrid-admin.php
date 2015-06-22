@@ -115,12 +115,12 @@ function altlab_postgrid_shortcode( $atts ) {
         'max_column' => '3',
         'thumbnail' => 'true',
         'thumbnail_size' => 'large',
-        'excerpt' => 'false',
-        'content' => 'true',
-        'title' => 'false',
-        'permalink' => 'false',
-        'author' => 'false',
-        'date' => 'false',
+        'excerpt' => 'true',
+        'content' => 'false',
+        'title' => 'true',
+        'permalink' => 'true',
+        'author' => 'true',
+        'date' => 'true',
         'use_plugin_styles' => 'true',
         'use_plugin_theme' => 'light'
     ), $atts );

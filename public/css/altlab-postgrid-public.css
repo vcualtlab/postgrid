@@ -151,7 +151,9 @@
 }
 
 .altlab-postgrid-brick.styled .thumbnail {
-	margin-bottom: 15px;
+	padding: 0 0 0 0;
+	margin: 0 auto 15px auto;
+	border: none;
 }
 
 .altlab-postgrid-brick.styled .post-meta {
@@ -179,6 +181,7 @@
 .navigation.pagination{
 	overflow: auto;
 	zoom: 1;
+	width: 100%;
 }
 
 .navigation.pagination .next{
