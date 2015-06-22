@@ -160,6 +160,10 @@
 	margin: 0 0 1em;
 	padding: 0;
 	list-style-type: none;
+	width: 100%;
+	border: none;
+	float: none;
+	text-align: left;
 }
 
 .altlab-postgrid-brick.styled .post-meta .post-title {
