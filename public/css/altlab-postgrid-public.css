@@ -195,3 +195,29 @@
 .navigation.pagination .prev{
 	float: left;
 }
+
+
+
+.altlab-postgrid-masonry .mix{
+    display: none;
+}
+
+
+.altlab-postgrid-masonry.mixer:before,
+.altlab-postgrid-masonry.mixer:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.altlab-postgrid-masonry.mixer:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.altlab-postgrid-masonry.mixer {
+    *zoom: 1;
+}
+
