@@ -96,7 +96,7 @@ class Altlab_Postgrid_Public {
 		 * class.
 		 */
 
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/altlab-postgrid-public.js', array( 'jquery','jquery-masonry' ), $this->version, false );
+		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/altlab-postgrid-public.js', array( 'jquery' ), $this->version, false );
 
 	}
 

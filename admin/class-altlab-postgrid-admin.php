@@ -125,8 +125,6 @@ function altlab_postgrid_shortcode( $atts ) {
         'use_plugin_styles' => 'true',
         'use_plugin_theme' => 'light'
     ), $atts );
- 	
- 	$output= "";
 
  	$classy_cats = "";
  	$classy_tags = "";
@@ -135,13 +133,32 @@ function altlab_postgrid_shortcode( $atts ) {
  	$cats_array = "";
  	$tags_array = "";
 
+ 	$output= "";
+
  	function get_mix_cats( $categories ) {
  		$classy_cats = "";
- 		foreach ( $categories as $cat ){
- 			// print_r( $cat );
- 			$classy_cats .= $cat->slug." ";
- 		}
+ 		
+ 		if( $categories ){
+	 		foreach ( $categories as $cat ){
+	 			// print_r( $cat );
+	 			$classy_cats .= $cat->slug." ";
+	 		}
+	 	}
+ 		
  		return $classy_cats;
+ 	}
+
+ 	function get_mix_tags( $tags ) {
+ 		$classy_tags = "";
+ 		
+ 		if ( $tags ) {
+	 		foreach ( $tags as $tag ){
+	 			// print_r( $cat );
+	 			$classy_tags .= "tag-".$tag->slug." ";
+	 		}
+ 		} 		
+
+ 		return $classy_tags;
  	}
 	
 	// setup mix_it_up
@@ -152,12 +169,10 @@ function altlab_postgrid_shortcode( $atts ) {
 		if ( $a['category'] ){
 			$clean_cats = str_replace(' ', '', $a['category'] );
 			$cats_array = explode(",", $clean_cats);
-			// $classy_cats = str_replace(',', ' ', $a['category'] );
 		}
 		if ( $a['tag'] ){
-			$clean_tags = str_replace(' ', '', $a['category'] );
-			$tags_array = explode(",", $clean_cats);
-			// $classy_tags = str_replace(',', ' ', $a['category'] );
+			$clean_tags = str_replace(' ', '', $a['tag'] );
+			$tags_array = explode(",", $clean_tags);
 		}
 		
 		if ( $cats_array ){
@@ -169,8 +184,8 @@ function altlab_postgrid_shortcode( $atts ) {
 		}
 		if ( $tags_array ){
 			$tag_filters = '';
-			foreach ($tags_aray as $filter){
-				$tag_filters .= "<button class='filter' data-filter='.".$filter."'>".$filter."</button>";
+			foreach ($tags_array as $filter){
+				$tag_filters .= "<button class='filter' data-filter='.tag-".$filter."'>".$filter."</button>";
 			}
 			echo $tag_filters;
 		}
@@ -188,7 +203,24 @@ function altlab_postgrid_shortcode( $atts ) {
 		'paged' => $paged,
 		'posts_per_page' => $a['posts_per_page'],
 		'category_name' => $a['category'],
-        'tag' => $a['tag']
+        'tag' => $a['tag'],
+
+        'tax_query' => array(
+		    'relation' => 
+		    	'OR',                      
+			    array(
+			      'taxonomy' => 'category',                //(string) - Taxonomy.
+			      'field' => 'slug',                    //(string) - Select taxonomy term by ('id' or 'slug')
+			      'terms' => array( $a['category'] ),    //(int/string/array) - Taxonomy term(s).
+			      'include_children' => false,
+			    ),
+			    array(
+			      'taxonomy' => 'tag',
+			      'field' => 'slug',
+			      'terms' => array( $a['tag'] ),
+			      'include_children' => false,
+			    )
+	    ),
 	);
 
 	$the_query = new WP_Query( $args );
@@ -204,7 +236,7 @@ function altlab_postgrid_shortcode( $atts ) {
 		// thumbnail output
 		$style = ($a['use_plugin_styles'] == 'true') ? 'styled' : '';
 		$theme = $a['use_plugin_theme'];
-		$output .= "<article class='altlab-postgrid-brick ".$style." ".$theme." ".$mix_it_up." ".get_mix_cats( get_the_category() )."'>";
+		$output .= "<article class='altlab-postgrid-brick ".$style." ".$theme." ".$mix_it_up." ".get_mix_cats( get_the_category() )." ".get_mix_tags( get_the_tags() )."'>";
 		if ( has_post_thumbnail() && $a['thumbnail'] == 'true' ) {
 			$thumbnail_url = wp_get_attachment_image_src( get_post_thumbnail_id(), $a['thumbnail_size']);
 			$output .= "<img class='thumbnail' src='".$thumbnail_url[0]."'/>";

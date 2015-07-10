@@ -16,7 +16,7 @@
  * Plugin Name:       ALT Lab Post Grid
  * Plugin URI:        https://github.com/vcualtlab/postgrid
  * Description:       Shortcode to display posts in Masonry Grid
- * Version:           1.0.0
+ * Version:           1.1.0
  * Author:            Mark Luetke
  * Author URI:        http://luetkemj.github.io
  * License:           WTFL

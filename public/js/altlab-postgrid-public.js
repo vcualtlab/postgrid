@@ -45,18 +45,16 @@
 	 */
 
 	$( window ).load(function() {
-		// $('.altlab-postgrid-masonry').masonry({
-		//   // set itemSelector so .grid-sizer is not used in layout
-		//   itemSelector: '.altlab-postgrid-brick',
-		//   // use element for option
-		//   columnWidth: '.altlab-postgrid-grid-sizer',
-		//   percentPosition: true
-		// });
-
 		// remove the attrs here - width height and scale - this is added in by some themes - we don't want them
 		$('.altlab-postgrid-brick img').removeAttr( "height" ).removeAttr( "width" ).removeAttr( "scale" );
 		
-		$('.altlab-postgrid-masonry.mixer').mixItUp(); 
+		$('.altlab-postgrid-masonry.mixer').mixItUp({
+		    animation: {
+		        effects: 'fade',
+		        duration: 1
+		    }
+		}); 
+
 
 	});
 

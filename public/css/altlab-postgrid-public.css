@@ -5,20 +5,21 @@
 
   /* fluid 5 columns */
 .altlab-postgrid-masonry{
+	/*overflow: hidden;*/
 	box-sizing: border-box;
-	width: 98%;
-	margin: 0 1%;
+
+
 }
 
-.altlab-postgrid-grid-sizer,
-.altlab-postgrid-brick { 
-	box-sizing: border-box;
-	width: 100%;
-	margin-right: 0%;
-}
 
 .altlab-postgrid-brick{
 	margin-bottom: 1em;
+
+	-webkit-column-break-inside:avoid;
+	-moz-column-break-inside:avoid;
+	-o-column-break-inside:avoid;
+	-ms-column-break-inside:avoid;
+	column-break-inside:avoid;
 }
 
 .altlab-postgrid-brick img{
@@ -28,97 +29,53 @@
 }
 
 
-
 @media (min-width: 500px) {
-	.altlab-postgrid-masonry{
-		width: 98%;
-		margin: 0 1%;
-		position: relative;
-		right: -2%;
-	}
-	.altlab-postgrid-masonry.maxcol2 .altlab-postgrid-grid-sizer,
-	.altlab-postgrid-masonry.maxcol3 .altlab-postgrid-grid-sizer,
-	.altlab-postgrid-masonry.maxcol4 .altlab-postgrid-grid-sizer,
-	.altlab-postgrid-masonry.maxcol5 .altlab-postgrid-grid-sizer,
-	.altlab-postgrid-masonry.maxcol6 .altlab-postgrid-grid-sizer,
-	.altlab-postgrid-masonry.maxcol2 .altlab-postgrid-brick,
-	.altlab-postgrid-masonry.maxcol3 .altlab-postgrid-brick,
-	.altlab-postgrid-masonry.maxcol4 .altlab-postgrid-brick,
-	.altlab-postgrid-masonry.maxcol5 .altlab-postgrid-brick,
-	.altlab-postgrid-masonry.maxcol6 .altlab-postgrid-brick{ 
-		width: 48%;
-		margin-right: 1%;
+	.altlab-postgrid-masonry.maxcol2,
+	.altlab-postgrid-masonry.maxcol3,
+	.altlab-postgrid-masonry.maxcol4,
+	.altlab-postgrid-masonry.maxcol5,
+	.altlab-postgrid-masonry.maxcol6{
+	  -webkit-column-count:2;
+      -moz-column-count:2;
+	  column-count:2;
 	}
 }
 
 @media (min-width: 900px) {
-	.altlab-postgrid-masonry{
-		width: 98%;
-		margin: 0 1%;
-		position: relative;
-		right: -1%;
-	}
-	.altlab-postgrid-masonry.maxcol3 .altlab-postgrid-grid-sizer,
-	.altlab-postgrid-masonry.maxcol4 .altlab-postgrid-grid-sizer,
-	.altlab-postgrid-masonry.maxcol5 .altlab-postgrid-grid-sizer,
-	.altlab-postgrid-masonry.maxcol6 .altlab-postgrid-grid-sizer,
-	.altlab-postgrid-masonry.maxcol3 .altlab-postgrid-brick,
-	.altlab-postgrid-masonry.maxcol4 .altlab-postgrid-brick,
-	.altlab-postgrid-masonry.maxcol5 .altlab-postgrid-brick,
-	.altlab-postgrid-masonry.maxcol6 .altlab-postgrid-brick{ 
-		width: 32%;
-		margin-right: 1%;
+	.altlab-postgrid-masonry.maxcol3,
+	.altlab-postgrid-masonry.maxcol4,
+	.altlab-postgrid-masonry.maxcol5,
+	.altlab-postgrid-masonry.maxcol6{
+	  -webkit-column-count:3;
+      -moz-column-count:3;
+	  column-count:3;
 	}
 }
 
 @media (min-width: 1200px) {
-	.altlab-postgrid-masonry{
-		width: 98%;
-		margin: 0 1%;
-		position: relative;
-		right: -1%;
-	}
-
-	.altlab-postgrid-masonry.maxcol4 .altlab-postgrid-grid-sizer,
-	.altlab-postgrid-masonry.maxcol5 .altlab-postgrid-grid-sizer,
-	.altlab-postgrid-masonry.maxcol6 .altlab-postgrid-grid-sizer,
-	.altlab-postgrid-masonry.maxcol4 .altlab-postgrid-brick,
-	.altlab-postgrid-masonry.maxcol5 .altlab-postgrid-brick,
-	.altlab-postgrid-masonry.maxcol6 .altlab-postgrid-brick{ 
-		width: 24%;
-		margin-right: 1%;
+	.altlab-postgrid-masonry.maxcol4,
+	.altlab-postgrid-masonry.maxcol5,
+	.altlab-postgrid-masonry.maxcol6{
+	  -webkit-column-count:4;
+      -moz-column-count:4;
+	  column-count:4;
 	}
 }
 
 @media (min-width: 1400px) {
-	.altlab-postgrid-masonry{
-		width: 98%;
-		margin: 0 1%;
-		position: relative;
-		right: -1%;
-	}
-
-	.altlab-postgrid-masonry.maxcol5 .altlab-postgrid-grid-sizer,
-	.altlab-postgrid-masonry.maxcol6 .altlab-postgrid-grid-sizer,
-	.altlab-postgrid-masonry.maxcol5 .altlab-postgrid-brick,
-	.altlab-postgrid-masonry.maxcol6 .altlab-postgrid-brick{ 
-		width: 19%;
-		margin-right: 1%;
+	.altlab-postgrid-masonry.maxcol5,
+	.altlab-postgrid-masonry.maxcol6{
+	  -webkit-column-count:5;
+      -moz-column-count:5;
+	  column-count:5;
 	}
 }
 
 @media (min-width: 1800px) {
-	.altlab-postgrid-masonry{
-		width: 98%;
-		margin: 0 1%;
-		position: relative;
-		right: -1%;
-	}
-
-	.altlab-postgrid-masonry.maxcol6 .altlab-postgrid-grid-sizer,
-	.altlab-postgrid-masonry.maxcol6 .altlab-postgrid-brick{ 
-		width: 15%;
-		margin-right: 1%;
+	.altlab-postgrid-masonry.maxcol6{
+	  -webkit-column-count:6;
+      -moz-column-count:6;
+	  column-count:6;
 	}
 }
 
@@ -197,27 +154,6 @@
 }
 
 
-
 .altlab-postgrid-masonry .mix{
     display: none;
 }
-
-
-.altlab-postgrid-masonry.mixer:before,
-.altlab-postgrid-masonry.mixer:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
-}
-
-.altlab-postgrid-masonry.mixer:after {
-    clear: both;
-}
-
-/**
- * For IE 6/7 only
- * Include this rule to trigger hasLayout and contain floats.
- */
-.altlab-postgrid-masonry.mixer {
-    *zoom: 1;
-}
-
