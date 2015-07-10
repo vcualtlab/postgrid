@@ -1,6 +1,6 @@
 # ALT Lab Post Grid
 
-Version: 1.0
+Version: 1.1
 
 Requires at least: 3.0.1
 
@@ -19,7 +19,8 @@ Shortcode for displaying posts or custom post types in masonry grid.
 | post_type         | 'post'     | any registered post type
 | category          | ''         | comma seperated list of category slugs
 | tag               | ''         | comma seperated list of tag slugs
-| paged             | 'true'     | enable Pagination
+| mix_it_up         | 'false'    | allow sorting by categories and or tags 
+| paged             | 'true'     | enable Pagination - reccomend setting to false if using mix_it_up
 | posts_per_page    | '15'       | max number of posts per page
 | max_column        | '3'        | maximum number of columns (1-6) at fullscreen (responsive)
 | thumbnail         | 'true'     | show thumbnail (featured image)
@@ -46,4 +47,7 @@ Shortcode for displaying posts or custom post types in masonry grid.
 
 ## Changelog 
 
-v1.0
+v1.1
+
+* Added support for [Mix It Up](https://mixitup.kunkalabs.com/)
+* Removed Masonry and replaced with css columns 
