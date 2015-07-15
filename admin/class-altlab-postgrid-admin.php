@@ -110,7 +110,7 @@ function altlab_postgrid_shortcode( $atts ) {
     	'mix_it_up' => 'false',
         'paged' => 'true',
         'post_type' => 'post',
-        'category' => '',
+        'category' => 'uncategorized',
         'tag' => '',
         'posts_per_page' => '15',
         'max_column' => '3',
