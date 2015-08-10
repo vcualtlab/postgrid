@@ -239,7 +239,7 @@ function altlab_postgrid_shortcode( $atts ) {
 		$output .= "<article class='altlab-postgrid-brick ".$style." ".$theme." ".$mix_it_up." ".get_mix_cats( get_the_category() )." ".get_mix_tags( get_the_tags() )."'>";
 		if ( has_post_thumbnail() && $a['thumbnail'] == 'true' ) {
 			$thumbnail_url = wp_get_attachment_image_src( get_post_thumbnail_id(), $a['thumbnail_size']);
-			$output .= "<img class='thumbnail' src='".$thumbnail_url[0]."'/>";
+			$output .= "<a href='".get_permalink()."'><img class='thumbnail' src='".$thumbnail_url[0]."'/></a>";
 		}
 		
 		// postmeta
