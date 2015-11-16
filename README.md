@@ -14,6 +14,9 @@ Shortcode for displaying posts or custom post types in masonry grid.
 
 `[altlab-postgrid]`
 
+`[altlab-postgrid category='something' max_column='2' excerpt='false' author='false' date='false']`
+This shortcode would give you a two column layout showing only the posts in category 'something' and it would hide the excerpt, the author, and the date. 
+
 | Attribute         | Default    | Description   
 | :---------------- | :--------- | :------------- 
 | post_type         | 'post'     | any registered post type
