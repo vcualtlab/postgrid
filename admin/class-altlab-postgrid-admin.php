@@ -140,7 +140,7 @@ function altlab_postgrid_shortcode( $atts ) {
  		
  		if( $categories ){
 	 		foreach ( $categories as $cat ){
-	 			// print_r( $cat );
+	 			//print_r( $cat );
 	 			$classy_cats .= $cat->slug." ";
 	 		}
 	 	}
@@ -181,6 +181,7 @@ function altlab_postgrid_shortcode( $atts ) {
 				$cat_filters .= "<button class='filter' data-filter='.".$filter."'>".$filter."</button>";
 			}
 			echo $cat_filters;
+			echo "<button class='filter' data-filter='all'>See All</button>"; //resets filter 
 		}
 		if ( $tags_array ){
 			$tag_filters = '';
@@ -244,23 +245,23 @@ function altlab_postgrid_shortcode( $atts ) {
 		
 		// postmeta
 		if ( $a['title'] == 'true' || $a['author'] == 'true' || $a['date'] == 'true' ){
-			$output .= "<ul class='post-meta'>";
+			$output .= "<div class='post-meta'>";
 			if ( $a['permalink'] == 'true' ){
 				$output .= "<a href='".get_permalink()."'>";
 			}
 				if ( $a['title'] == 'true' ){
-					$output .= "<li class='post-title'>".get_the_title()."</li>";
+					$output .= "<div class='post-title'>".get_the_title()."</div>";
 				}
 			if ( $a['permalink'] == 'true' ){
 				$output .= "</a>";
 			}
 			if ( $a['author'] == 'true' ){
-				$output .= "<li class='post-author'>".get_the_author()."</li>";
+				$output .= "<div class='post-author'>".get_the_author()."</div>";
 			}
 			if ( $a['date'] == 'true' ){
-				$output .= "<li class='post-date'>".get_the_date()."</li>";
+				$output .= "<div class='post-date'>".get_the_date()."</div>";
 			}
-			$output .= "</ul>";
+			$output .= "</div>";
 		}
 
 		if ( $a['content'] == 'true' ){

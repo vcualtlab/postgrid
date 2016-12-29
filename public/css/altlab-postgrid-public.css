@@ -79,6 +79,21 @@
 	}
 }
 
+.post-meta {
+	display: inline-block;
+}
+
+.post-title {
+	display: block;
+}
+
+.post-author {
+	display: block;
+}
+
+.post-date {
+	display: block;
+}
 
 .altlab-postgrid-brick.styled {
 	margin-top: 1%;
@@ -94,6 +109,31 @@
 	border: 1px solid #E2E2E2;
 	background: white;
 	color: #262B34;
+}
+
+.altlab-postgrid-brick.styled.magic {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	border: 1px solid #E2E2E2;
+	color: #262B34;
+}
+
+.post-meta{
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	border: 1px solid #E2E2E2;
+	color: #262B34;
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-decoration: none;
+    color: #fff;
+    display: none;
+}
+
+.altlab-postgrid-brick.styled.magic:hover .post-meta{
+	display:block;
 }
 
 .altlab-postgrid-brick.styled.dark {
