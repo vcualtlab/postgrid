@@ -196,8 +196,11 @@ function altlab_postgrid_shortcode( $atts ) {
 	}
 
 
-	// Run a new query for the twitpics
-	if ( $a['paged'] == 'true' ){ $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; } else { $paged = null; }
+	// Run a new query
+
+	if ( get_query_var( 'paged' ) ) { $paged = get_query_var( 'paged' ); }
+	else { $paged = 0; }
+
 
 	$args = array(
 		'post_type' => $a['post_type'],
@@ -283,7 +286,8 @@ function altlab_postgrid_shortcode( $atts ) {
 		
 
 	if ( $a['paged'] == 'true' ){
-		$output .= "<nav class='navigation pagination'><div class='next'>".get_next_posts_link('Next Page', $the_query->max_num_pages)."</div>";
+		$output .= "<nav class='navigation pagination'><div class='next'>".get_next_posts_link('Next Page', $the_query->max_num_pages)."</div>"; 
+		$output .= $the_query->max_num_pages . ' - ' . get_query_var( 'paged') . '/' . get_query_var( 'page') ;
 		$output .= "<div class='prev'>".get_previous_posts_link('Previous Page')."</div></nav>";
 	}
 
@@ -291,5 +295,6 @@ function altlab_postgrid_shortcode( $atts ) {
 	wp_reset_postdata();	
 
     return $output;
+
 }
 add_shortcode( 'altlab-postgrid', 'altlab_postgrid_shortcode' );

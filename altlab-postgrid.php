@@ -15,7 +15,7 @@
  * @wordpress-plugin
  * Plugin Name:       ALT Lab Post Grid
  * Plugin URI:        https://github.com/vcualtlab/postgrid
- * Description:       Shortcode to display posts in Masonry Grid
+ * Description:       Shortcode to display posts in Masonry Grid [altlab-postgrid category='something' max_column='2' excerpt='false' author='false' date='false']
  * Version:           1.1.0
  * Author:            Mark Luetke
  * Author URI:        http://luetkemj.github.io
