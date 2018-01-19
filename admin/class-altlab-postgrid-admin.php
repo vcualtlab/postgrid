@@ -77,28 +77,6 @@ class Altlab_Postgrid_Admin {
 
 	}
 
-	/**
-	 * Register the JavaScript for the admin area.
-	 *
-	 * @since    1.0.0
-	 */
-	public function enqueue_scripts() {
-
-		/**
-		 * This function is provided for demonstration purposes only.
-		 *
-		 * An instance of this class should be passed to the run() function
-		 * defined in Altlab_Postgrid_Loader as all of the hooks are defined
-		 * in that particular class.
-		 *
-		 * The Altlab_Postgrid_Loader will then create the relationship
-		 * between the defined hooks and the functions defined in this
-		 * class.
-		 */
-
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/altlab-postgrid-admin.js', array( 'jquery' ), $this->version, false );
-
-	}
 
 }
 
@@ -196,10 +174,17 @@ function altlab_postgrid_shortcode( $atts ) {
 	}
 
 
-	// Run a new query
+	// Run a new query for the twitpics
 
-	if ( get_query_var( 'paged' ) ) { $paged = get_query_var( 'paged' ); }
-	else { $paged = 0; }
+
+	if ( is_front_page() && $a['paged'] == 'true'){
+	 $paged = (get_query_var('page')) ? get_query_var('page') : 1; 
+	} 
+	elseif (is_front_page()===false && $a['paged'] == 'true') {
+		$paged = (get_query_var('paged')) ? get_query_var('paged') : 1; 
+	} else { 
+		$paged = null; 
+	}
 
 
 	$args = array(
@@ -271,7 +256,9 @@ function altlab_postgrid_shortcode( $atts ) {
 			$output .= get_the_content();
 		}
 		if ( $a['excerpt'] == 'true' ){
-			$output .= get_the_excerpt();
+			if (has_excerpt()){
+				$output .= get_the_excerpt();
+			}
 		}
 
 		if ( current_user_can('administrator') ){
@@ -287,7 +274,6 @@ function altlab_postgrid_shortcode( $atts ) {
 
 	if ( $a['paged'] == 'true' ){
 		$output .= "<nav class='navigation pagination'><div class='next'>".get_next_posts_link('Next Page', $the_query->max_num_pages)."</div>"; 
-		$output .= $the_query->max_num_pages . ' - ' . get_query_var( 'paged') . '/' . get_query_var( 'page') ;
 		$output .= "<div class='prev'>".get_previous_posts_link('Previous Page')."</div></nav>";
 	}
 
@@ -295,6 +281,5 @@ function altlab_postgrid_shortcode( $atts ) {
 	wp_reset_postdata();	
 
     return $output;
-
 }
 add_shortcode( 'altlab-postgrid', 'altlab_postgrid_shortcode' );
